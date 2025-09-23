@@ -83,6 +83,8 @@ loadingDialog.setCancelable(true); // or false
 
 ```java
 LoadingDialog loadingDialog = new LoadingDialog(this);
+loadingDialog.setCanceledOnTouchOutside(true); // or false
+loadingDialog.setCancelable(true); // or false
 loadingDialog.setTitle("Loading");
 loadingDialog.setMessage("Please wait while we process your request...");
 loadingDialog.show();
