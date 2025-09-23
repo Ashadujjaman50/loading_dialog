@@ -65,6 +65,12 @@ loadingDialog.setMessage("Uploading...");
 loadingDialog.dismiss();
 ```
 
+### Make dialog setCanceledOnTouchOutside
+
+```java
+loadingDialog.setCanceledOnTouchOutside(true); // or false
+```
+
 ### Make dialog cancelable
 
 ```java
@@ -101,5 +107,5 @@ You can edit the XML layout to match your app theme and design.
 
 ## License
 
-MIT License © \[Ashadujjaman50]
+License © \[Ashadujjaman50]
 
