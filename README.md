@@ -8,6 +8,7 @@ Easily show a progress dialog with optional title and message in any Activity or
 ## Features
 
 - Customizable **title** and **message**
+- Customizable **ProgressBar** style
 - Non-cancelable or cancelable dialogs
 - Easy to integrate and use
 - Lightweight and dependency-free
@@ -25,7 +26,7 @@ allprojects {
         maven { url 'https://jitpack.io' }
     }
 }
-````
+```
 
 Add the dependency:
 
@@ -79,35 +80,55 @@ loadingDialog.setCancelable(true); // or false
 
 ---
 
-## Example
+## ProgressBar Style Customization
+
+You can change the `ProgressBar` style at runtime using the `setTheme()` method. 
+
+### Set ProgressBar Style
 
 ```java
-LoadingDialog loadingDialog = new LoadingDialog(this);
-loadingDialog.setCanceledOnTouchOutside(true); // or false
-loadingDialog.setCancelable(true); // or false
-loadingDialog.setTitle("Loading");
-loadingDialog.setMessage("Please wait while we process your request...");
-loadingDialog.show();
-
-// Dismiss after task completion
-loadingDialog.dismiss();
+loadingDialog.setTheme(R.style.Theme_LoadingDialog_Horizontal);
 ```
+
+### Available Styles
+
+Here are the available built-in styles:
+
+| Style Name | Description |
+| :--- | :--- |
+| `Theme_LoadingDialog_Default` | Medium circular progress bar (default) |
+| `Theme_LoadingDialog_Horizontal` | Horizontal progress bar |
+| `Theme_LoadingDialog_Small` | Small circular progress bar |
+| `Theme_LoadingDialog_Large` | Large circular progress bar |
+| `Theme_LoadingDialog_Inverse` | Inverse medium circular progress bar |
+| `Theme_LoadingDialog_Small_Inverse` | Inverse small circular progress bar |
+| `Theme_LoadingDialog_Large_Inverse` | Inverse large circular progress bar |
+
 
 ---
 
-## Customization
+## Example
 
-The dialog uses a simple layout (`dialog_loading.xml`) with:
+```java
+// Initialize with default style
+LoadingDialog loadingDialog = new LoadingDialog(this);
+loadingDialog.setTitle("Loading");
+loadingDialog.setMessage("Please wait...");
+loadingDialog.show();
 
-* `TextView` for **title** (`@id/loading_title`)
-* `TextView` for **message** (`@id/loading_message`)
-* `ProgressBar` (`@id/loading_progress`)
+// You can change the style at any time
+// For example, change to a horizontal progress bar after 2 seconds
+new Handler(Looper.getMainLooper()).postDelayed(() -> {
+    loadingDialog.setTheme(R.style.Theme_LoadingDialog_Horizontal);
+    loadingDialog.setTitle("Processing...");
+}, 2000);
 
-You can edit the XML layout to match your app theme and design.
+// Dismiss after task completion
+// loadingDialog.dismiss();
+```
 
 ---
 
 ## License
 
-License © \[Ashadujjaman50]
-
+License © [Ashadujjaman50]
