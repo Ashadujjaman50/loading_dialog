@@ -20,5 +20,8 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Loading Dialog"
-include(":app")
+
+if (file("app").isDirectory) {
+    include(":app")
+}
 include(":loadingdialog")
