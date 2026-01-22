@@ -28,7 +28,6 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 
-    // 🔑 গুরুত্বপূর্ণ: release variant publish করতে declare করতে হবে
     publishing {
         singleVariant("release") {
             withSourcesJar()
@@ -36,6 +35,7 @@ android {
         }
     }
 }
+
 
 dependencies {
     implementation(libs.appcompat)
@@ -48,9 +48,9 @@ dependencies {
 publishing {
     publications {
         register<MavenPublication>("release") {
-            //groupId = "com.github.Ashadujjaman50"   // 🔑 তোমার GitHub username বসাও
-           // artifactId = "loadingdialog"               // লাইব্রেরির নাম
-           // version = "1.0.0"
+            groupId = "com.github.Ashadujjaman50"
+            artifactId = "loadingdialog"
+            version = "1.0.1"
 
             afterEvaluate {
                 from(components["release"])
