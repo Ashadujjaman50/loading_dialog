@@ -31,10 +31,15 @@ public class LoadingDialog {
     }
 
     public void dismiss() {
-        if (dialog != null && dialog.isShowing()) {
-            dialog.dismiss();
+        try {
+            if (dialog != null && dialog.isShowing()) {
+                dialog.dismiss();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
+
 
     public void setTitle(String title) {
         if (title != null && !title.isEmpty()) {
