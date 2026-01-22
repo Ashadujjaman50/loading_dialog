@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default style (medium circular) -->
+    <style name="Theme.LoadingDialog.Default" parent="">
+        <item name="loadingProgressBarStyle">@android:style/Widget.DeviceDefault.ProgressBar</item>
+    </style>
+
+    <!-- Horizontal style -->
+    <style name="Theme.LoadingDialog.Horizontal" parent="">
+        <item name="loadingProgressBarStyle">@android:style/Widget.DeviceDefault.ProgressBar.Horizontal</item>
+    </style>
+
+    <!-- Small circular style -->
+    <style name="Theme.LoadingDialog.Small" parent="">
+        <item name="loadingProgressBarStyle">@android:style/Widget.DeviceDefault.ProgressBar.Small</item>
+    </style>
+
+    <!-- Large circular style -->
+    <style name="Theme.LoadingDialog.Large" parent="">
+        <item name="loadingProgressBarStyle">@android:style/Widget.DeviceDefault.ProgressBar.Large</item>
+    </style>
+
+    <!-- Inverse medium circular style -->
+    <style name="Theme.LoadingDialog.Inverse" parent="">
+        <item name="loadingProgressBarStyle">@android:style/Widget.DeviceDefault.ProgressBar.Inverse</item>
+    </style>
+
+    <!-- Inverse small circular style -->
+    <style name="Theme.LoadingDialog.Small.Inverse" parent="">
+        <item name="loadingProgressBarStyle">@android:style/Widget.DeviceDefault.ProgressBar.Small.Inverse</item>
+    </style>
+
+    <!-- Inverse large circular style -->
+    <style name="Theme.LoadingDialog.Large.Inverse" parent="">
+        <item name="loadingProgressBarStyle">@android:style/Widget.DeviceDefault.ProgressBar.Large.Inverse</item>
+    </style>
+</resources>
