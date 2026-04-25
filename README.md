@@ -32,7 +32,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.Ashadujjaman50:loadingdialog:1.0.4'
+    implementation 'com.github.Ashadujjaman50:loadingdialog:1.0.5'
 }
 ```
 

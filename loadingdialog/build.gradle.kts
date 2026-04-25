@@ -52,7 +52,7 @@ afterEvaluate {
             register<MavenPublication>("release") {
                 groupId = "com.github.Ashadujjaman50"
                 artifactId = "loadingdialog"
-                version = "1.0.4"
+                version = "1.0.5"
 
                 afterEvaluate {
                     from(components["release"])

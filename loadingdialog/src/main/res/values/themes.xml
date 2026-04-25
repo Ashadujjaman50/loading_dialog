@@ -2,36 +2,36 @@
 <resources>
     <!-- Default style (medium circular) -->
     <style name="Theme.LoadingDialog.Default" parent="">
-        <item name="loadingProgressBarStyle">@android:style/Widget.DeviceDefault.ProgressBar</item>
+        <item name="loadingProgressBarStyle">?android:attr/progressBarStyle</item>
     </style>
 
     <!-- Horizontal style -->
     <style name="Theme.LoadingDialog.Horizontal" parent="">
-        <item name="loadingProgressBarStyle">@android:style/Widget.DeviceDefault.ProgressBar.Horizontal</item>
+        <item name="loadingProgressBarStyle">?android:attr/progressBarStyleHorizontal</item>
     </style>
 
     <!-- Small circular style -->
     <style name="Theme.LoadingDialog.Small" parent="">
-        <item name="loadingProgressBarStyle">@android:style/Widget.DeviceDefault.ProgressBar.Small</item>
+        <item name="loadingProgressBarStyle">?android:attr/progressBarStyleSmall</item>
     </style>
 
     <!-- Large circular style -->
     <style name="Theme.LoadingDialog.Large" parent="">
-        <item name="loadingProgressBarStyle">@android:style/Widget.DeviceDefault.ProgressBar.Large</item>
+        <item name="loadingProgressBarStyle">?android:attr/progressBarStyleLarge</item>
     </style>
 
     <!-- Inverse medium circular style -->
     <style name="Theme.LoadingDialog.Inverse" parent="">
-        <item name="loadingProgressBarStyle">@android:style/Widget.DeviceDefault.ProgressBar.Inverse</item>
+        <item name="loadingProgressBarStyle">?android:attr/progressBarStyleInverse</item>
     </style>
 
     <!-- Inverse small circular style -->
     <style name="Theme.LoadingDialog.Small.Inverse" parent="">
-        <item name="loadingProgressBarStyle">@android:style/Widget.DeviceDefault.ProgressBar.Small.Inverse</item>
+        <item name="loadingProgressBarStyle">?android:attr/progressBarStyleSmallInverse</item>
     </style>
 
     <!-- Inverse large circular style -->
     <style name="Theme.LoadingDialog.Large.Inverse" parent="">
-        <item name="loadingProgressBarStyle">@android:style/Widget.DeviceDefault.ProgressBar.Large.Inverse</item>
+        <item name="loadingProgressBarStyle">?android:attr/progressBarStyleLargeInverse</item>
     </style>
 </resources>
