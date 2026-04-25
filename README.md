@@ -32,7 +32,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.Ashadujjaman50:loadingdialog:1.0.4'
+    implementation 'com.github.Ashadujjaman50:loadingdialog:1.0.2'
 }
 ```
 
@@ -82,27 +82,27 @@ loadingDialog.setCancelable(true); // or false
 
 ## ProgressBar Style Customization
 
-You can change the `ProgressBar` style at runtime using the `setTheme()` method by passing a string.
+You can change the `ProgressBar` style at runtime using the `setTheme()` method. 
 
 ### Set ProgressBar Style
 
 ```java
-loadingDialog.setTheme("horizontal");
+loadingDialog.setTheme(R.style.Theme_LoadingDialog_Horizontal);
 ```
 
 ### Available Styles
 
 Here are the available built-in styles:
 
-| Theme String | Description |
+| Style Name | Description |
 | :--- | :--- |
-| `"default"` | Medium circular progress bar (default) |
-| `"horizontal"` | Horizontal progress bar |
-| `"small"` | Small circular progress bar |
-| `"large"` | Large circular progress bar |
-| `"inverse"` | Inverse medium circular progress bar |
-| `"small_inverse"` | Inverse small circular progress bar |
-| `"large_inverse"` | Inverse large circular progress bar |
+| `Theme_LoadingDialog_Default` | Medium circular progress bar (default) |
+| `Theme_LoadingDialog_Horizontal` | Horizontal progress bar |
+| `Theme_LoadingDialog_Small` | Small circular progress bar |
+| `Theme_LoadingDialog_Large` | Large circular progress bar |
+| `Theme_LoadingDialog_Inverse` | Inverse medium circular progress bar |
+| `Theme_LoadingDialog_Small_Inverse` | Inverse small circular progress bar |
+| `Theme_LoadingDialog_Large_Inverse` | Inverse large circular progress bar |
 
 
 ---
@@ -116,10 +116,10 @@ loadingDialog.setTitle("Loading");
 loadingDialog.setMessage("Please wait...");
 loadingDialog.show();
 
-// You can change the style at any time using simple string names
+// You can change the style at any time
 // For example, change to a horizontal progress bar after 2 seconds
 new Handler(Looper.getMainLooper()).postDelayed(() -> {
-    loadingDialog.setTheme("horizontal");
+    loadingDialog.setTheme(R.style.Theme_LoadingDialog_Horizontal);
     loadingDialog.setTitle("Processing...");
 }, 2000);
 
