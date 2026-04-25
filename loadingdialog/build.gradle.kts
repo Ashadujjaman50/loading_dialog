@@ -45,16 +45,20 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
 }
 
-publishing {
-    publications {
-        register<MavenPublication>("release") {
-            groupId = "com.github.Ashadujjaman50"
-            artifactId = "loadingdialog"
-            version = "1.0.3"
+// JitPack এর জন্য পাবলিশিং কনফিগারেশন
+afterEvaluate {
+    publishing {
+        publications {
+            register<MavenPublication>("release") {
+                groupId = "com.github.Ashadujjaman50"
+                artifactId = "loadingdialog"
+                version = "1.0.4"
 
-            afterEvaluate {
-                from(components["release"])
+                afterEvaluate {
+                    from(components["release"])
+                }
             }
         }
     }
 }
+

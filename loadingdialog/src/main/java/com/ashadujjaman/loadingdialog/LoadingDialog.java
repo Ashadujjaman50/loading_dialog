@@ -45,8 +45,32 @@ public class LoadingDialog {
         setCanceledOnTouchOutside(this.canceledOnTouchOutside);
     }
 
-    public void setTheme(int themeResId) {
-        this.themeResId = themeResId;
+    public void setTheme(String theme) {
+        if (theme == null) theme = "default";
+        switch (theme.toLowerCase()) {
+            case "horizontal":
+                this.themeResId = R.style.Theme_LoadingDialog_Horizontal;
+                break;
+            case "small":
+                this.themeResId = R.style.Theme_LoadingDialog_Small;
+                break;
+            case "large":
+                this.themeResId = R.style.Theme_LoadingDialog_Large;
+                break;
+            case "inverse":
+                this.themeResId = R.style.Theme_LoadingDialog_Inverse;
+                break;
+            case "small_inverse":
+                this.themeResId = R.style.Theme_LoadingDialog_Small_Inverse;
+                break;
+            case "large_inverse":
+                this.themeResId = R.style.Theme_LoadingDialog_Large_Inverse;
+                break;
+            default:
+                this.themeResId = R.style.Theme_LoadingDialog_Default;
+                break;
+        }
+
         if (dialog != null) {
             boolean wasShowing = dialog.isShowing();
             dialog.dismiss();
